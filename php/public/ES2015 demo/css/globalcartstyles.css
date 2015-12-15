@@ -1,0 +1,50 @@
+body {
+	font-size: 0.875em; 
+}
+
+#wrapper {
+	width: 80%;
+	border-radius: 1em;
+	margin: 0em auto;
+	padding: 1em;
+	background-color: rgba(51, 204, 51, 0.6);
+}
+
+#gameTabs li {
+	display: inline-block;
+	width:  12.5%;
+	padding: 0.5em;
+	background: #fff;
+	border-radius: 0.4em;
+	font-weight:bold;
+	list-style: none;
+	cursor: pointer;
+	margin-right: 0.4em;
+	text-align: center;
+}
+
+#gameTabs li:last-of-type {
+	margin-right: 0;
+}
+
+.gameDetails {
+	background: #fff;
+	width: 50%;
+	display: none;
+	padding: 1em
+}
+
+.selectedGame  {
+	display: block;
+}
+
+.drawNumbers input {
+	text-align: center;
+	font-weight: bold;
+	color: #000;
+}
+
+#bonusNumber {
+	background-color: red;
+	color: #fff;
+}
