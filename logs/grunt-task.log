@@ -1,0 +1,8 @@
+
+Running "browserify:dist" (browserify) task
+>> Bundle php/public/ES2015Demo/build/ES2015Demo/constants.js created.
+>> Bundle php/public/ES2015Demo/build/ES2015Demo/drawGame.js created.
+>> Bundle php/public/ES2015Demo/build/ES2015Demo/playslipgame.js created.
+>> Bundle php/public/ES2015Demo/build/ES2015Demo/buildPayslipGames.js created.
+
+Done, without errors.

@@ -1,0 +1,18 @@
+payslipGames(
+{
+	"games": 
+	[
+		{
+			"gameName": "Powerball",
+			"configFile": "data/PBDetails.json",
+			"callback": "pbDetails",
+			"gameLogo" : "img/games/powerball.png"
+		},
+		{
+			"gameName": "MegaBucks",
+			"configFile": "data/MBDetails.json",
+			"callback": "mbDetails",
+			"gameLogo" : "img/games/MB.png"
+		}
+	]
+})

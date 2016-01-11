@@ -1,0 +1,24 @@
+pbDetails(
+{ 
+	"gameName": "Powerball",
+	"numberOfPicks" : 5, 
+	"numberPool" : 59, 
+	"bonusBall" : true,
+	"bonusBallPool": 20,
+	"gameLogo" : "games/powerball.png",
+	"price-per-game" : 1.00,
+	"gamesTabs" : [
+		{
+			"name" :  "Information",
+			"details" : "Powerball jackpots start at $40 million and keep growing until somebody wins. Cost is $2 per play for a chance to win millions."
+		},
+		{
+			"name" :  "Numbers",
+			"details" : "Please choose your numbers for the drawing"
+		},
+		{
+			"name" :  "Powerball",
+			"details" : "Please choose one number as your powerball"
+		}
+	]
+});

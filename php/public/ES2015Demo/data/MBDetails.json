@@ -1,0 +1,25 @@
+mbDetails(
+{ 
+	"gameName": "MegaBucks",
+	"numberOfPicks" : 5, 
+	"numberPool" : 41, 
+	"bonusBall" : true,
+	"bonusBallPool": 30,
+	"gameLogo" : "games/MB.png",
+	"price-per-game" : 1.00,
+	"gamesTabs" : [
+		{
+			"name" :  "Information",
+			"details" : "Powerball jackpots start at $40 million and keep growing until somebody wins. Cost is $2 per play for a chance to win millions."
+		},
+		{
+			"name" :  "Numbers",
+			"details" : "Please choose your numbers for the drawing"
+		},
+		{
+			"name" :  "Powerball",
+			"details" : "Please choose one number as your powerball"
+		}
+	]
+});
+

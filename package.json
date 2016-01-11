@@ -5,24 +5,14 @@
   "private": true,
   "devDependencies" : {
         "grunt" :                       "*",
-        "grunt-contrib-cssmin":         "*",
-        "grunt-contrib-sass":           "*",
-		"css-condense":					"*",
-        "grunt-contrib-uglify":         "*",
-		"grunt-contrib-jshint":			"*",
-		"grunt-contrib-imagemin":		"*",
-		"imagemin-pngquant":			"*",
-		"imagemin-mozjpeg":				"*",
-		"imagemin-gifsicle":			"*",
         "grunt-contrib-watch":          "*",
-        "grunt-cssc":                   "*",
-        "grunt-htmlhint":               "*",
-		"grunt-jsonlint":				"*",
 		"logfile-grunt":				"*",
 		"babelify":						"*",
 		"grunt-browserify": 			"*",
 		"babel-preset-es2015":			"*",
 		"react": 						"*",
-        "matchdep":                     "*"
+        "matchdep":                     "*",
+		"wrappy":						"*",
+		"lodash":						"*"
     }
 }

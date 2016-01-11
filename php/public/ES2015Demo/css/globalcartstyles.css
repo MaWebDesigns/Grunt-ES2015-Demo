@@ -3,17 +3,24 @@ body {
 }
 
 #wrapper {
-	width: 80%;
+	width: 100%;
 	border-radius: 1em;
 	margin: 0em auto;
 	padding: 1em;
 	background-color: rgba(51, 204, 51, 0.6);
 }
 
+#gameTabs {
+	margin: 0;
+	padding: 0;
+	position: relative;
+	top: 0.4em;
+}
+
 #gameTabs li {
 	display: inline-block;
 	width:  12.5%;
-	padding: 0.5em;
+	padding: 0.2em;
 	background: #fff;
 	border-radius: 0.4em;
 	font-weight:bold;
@@ -23,13 +30,17 @@ body {
 	text-align: center;
 }
 
+#gameTabs img {
+	width: 100%;
+}
+
 #gameTabs li:last-of-type {
 	margin-right: 0;
 }
 
 .gameDetails {
 	background: #fff;
-	width: 50%;
+	width: 90%;
 	display: none;
 	padding: 1em
 }
@@ -44,7 +55,36 @@ body {
 	color: #000;
 }
 
-#bonusNumber {
+input.bonusNumber {
 	background-color: red;
 	color: #fff;
+	text-align: center;
+	font-weight: bold;
+}
+
+.selected {
+	background-color: blue;
+	color: white;
+}
+
+.bonusSelected {
+	background-color: red;
+	color: white;
+}
+
+.drawPool {
+	border:1px solid #000;
+	margin-bottom:5px;
+}
+
+.bonusPool {
+	border: 1px solid black;
+}
+
+.bonusPoolButton,
+.poolButton 
+{
+	width: 8.33%;
+	text-align:center;
+	
 }

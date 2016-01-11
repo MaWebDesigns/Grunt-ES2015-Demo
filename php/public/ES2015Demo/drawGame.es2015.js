@@ -1,7 +1,7 @@
 // Import from Constants
-import {DEFAULT_GAME_CONFIG, AJAX_CONTENT_TYPE, AJAX_DATA_TYPE, AJAX_TIMEOUT} from "./constants.es2015.js";
+import {DEFAULT_GAME_CONFIG, DEFAULT_GAME_CALLBACK, AJAX_CONTENT_TYPE, AJAX_DATA_TYPE, AJAX_TIMEOUT, DEFAULT_LOGO} from "./constants.es2015.js";
 
-export default class DrawGame {
+export class DrawGame {
 	
 	/*************************************************
 	// Ctor
@@ -15,10 +15,17 @@ export default class DrawGame {
 	//
 	// Returns:  None
 	*/
-	constructor(gameName = "DemoGame", configFilePath = DEFAULT_GAME_CONFIG) 
+	constructor(gameName = "DemoGame", configFilePath = DEFAULT_GAME_CONFIG, callback = DEFAULT_GAME_CALLBACK, logo = DEFAULT_LOGO) 
 	{
 		this.gameName = gameName;
 		this.configFile = configFilePath;
+		this.callBack = callback;
+		this.gameLogo =  logo;
+		
+		this.pickedNumbers = new Set(); 
+		this.bonusNumber = "-";
+		
+		console.log(`In DrawGame Ctor for ${this.gameName}`);
 	}
 		
 	/*************************************************
@@ -32,17 +39,19 @@ export default class DrawGame {
 	*/
 	getGameConfiguration()
 	{
+		let game =  this;
+		// console.log(`In DrawGame.getGameConfiguration`)
 		$.ajax( this.configFile, 
 		{
 			timeout : AJAX_TIMEOUT,
+			jsonpCallback : this.callBack,
 			context: game,
-			jsonpCallback : 'details',
 			crossDomain : true,
 			contentType : AJAX_CONTENT_TYPE,
 			dataType: AJAX_DATA_TYPE,
-			success : setupGames(),
+			success : game.setupGames,
 			error : function(request, errorType, errorMessage) {
-				alert("error ${errorType} - ${errorMessage}");
+				alert(`error ${errorType} - ${errorMessage}`);
 			}
 		});
 			
@@ -58,7 +67,27 @@ export default class DrawGame {
 	//
 	// Returns:  None
 	*/
-	setupGames(response) {
-		console.log("In SetupGames");
+	setupGames(data) {
+		console.log(`In SetupGames ${data.gameName}`);
+		
+		this.numberOfPicks = data.numberOfPicks;
+	}
+	
+	updateDrawNumbers() 
+	{
+		console.log("in UpdateDrawNumbers");
+	//	this.pickedNumbers.sort();
+		let i = 0;
+		for (let num of this.pickedNumbers)
+		{
+			$('.drawNumber').eq(i).val(num);
+			i++;
+		}
+	}
+	
+	updateBonusNumbers()
+	{
+		console.log("In updateBonusNumbers");
+		$('.bonusNumber').val(this.bonusNumber);
 	}
 }  // end DrawGame
